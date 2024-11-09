@@ -1,0 +1,11 @@
+.user-card{
+    box-shadow: 0px 0px 10px -1px violet;
+    color: blueviolet;
+    border-radius: 10px;
+}
+
+img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}

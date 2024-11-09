@@ -1,0 +1,11 @@
+form{
+    width:50%;
+    input{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-inline:30px;
+        background-color: palevioletred;
+    }
+}

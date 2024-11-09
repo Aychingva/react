@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.container{
+  max-width: 1140px;
+  width:90% ;
+
+}
+input{
+  padding: 10px;
+  /* display: block; */
+  width: 400px;
+  box-shadow: 0 0 10px -1px violet;
+  margin:auto;
+  margin-bottom: 40px;
+  
+  outline: none;
+  
+}
+.users{
+ 
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+
+}

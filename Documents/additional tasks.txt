@@ -1,0 +1,186 @@
+/*
+int main(){
+    int stops;
+    printf("enter the number of stops;");
+    scanf("%d",&stops);
+    int batterycapacity=50;
+    int kilometres=250;
+    double newkilometres;
+    double minutes;
+    int summ=0;
+    double left_charge=50;
+
+    printf("battary left;%d range;%d total drive 0 km with 0 stops;",batterycapacity,kilometres );
+
+    for(int i=1;i<=stops;i++){
+    
+        printf("enter kilometres planned to be driven for each trip and planned charging time for each; ");
+    
+        scanf("%lf",&newkilometres); 
+        summ+=newkilometres;
+        if(newkilometres>250){
+            printf("invalid");
+            break;
+        }
+
+        
+        printf("minutes charged;");
+        scanf("%lf",&minutes);
+    
+        double charge=minutes*25/30;
+        double consume=newkilometres*0.2/1;
+        left_charge=left_charge-consume+charge;
+        
+    
+      
+        if(left_charge>50){
+            left_charge=50;   
+        }
+        
+        
+        printf("battery charge %lf range;%lf",left_charge,left_charge*5);
+        printf("total drive %d km with %d",summ,i);
+
+    }
+
+}
+
+
+
+*/
+
+
+
+
+
+#include<stdlib.h>
+#include <time.h>
+
+int dive(){
+    return rand()%2+1;
+}
+
+
+int goal(int kick_direction,int dive_direction){
+    return kick_direction!=dive_direction;
+}
+
+
+void print_ball(int ball_direction){
+    if(ball_direction==1){
+        puts("-----------------");
+        
+        puts("|    O          |");
+        puts("|               |");
+        puts("|               |");
+    
+    }else if(ball_direction==2){
+        puts("-----------------");
+        puts("|          O    |");
+        puts("|               |");
+        puts("|               |");
+
+
+    }
+
+}
+
+
+
+void print_goalkeeper(int goalkeeper){
+    
+     if(goalkeeper==1){
+        puts("-----------------");
+        puts("|  _ o|         |");
+        puts("|     \\         |");
+        puts("|      \\\\     |");
+
+
+    }else if(goalkeeper==2){
+        puts("-----------------");
+        puts("|         |o _  |");
+        puts("|         /     |");
+        puts("|       //      |");
+
+    }
+
+}
+
+
+int main(){
+    //srand(time(NULL));
+    int seed;
+    printf("enter the seed \n");
+    scanf("%d",&seed);
+    srand(seed);
+
+
+
+    int rounds;
+    printf("enter the rounds\n");
+    scanf("%d",&rounds);
+    puts("-----------------");
+    puts("|     _ o _     |");
+    puts("|       |       |");
+    puts("|      / \\      |");
+
+
+
+
+    char team1[20],team2[20];
+    printf("enter the team1;\n");
+    scanf("%s",&team1);
+    printf("enter the team2;\n");
+    scanf("%s",&team2);
+    int score1=0;
+    int score2=0;
+    //printf("%s has scored %d,%s has scored %d\n",team1,score1,team2,score2);
+    for(int i=1;i<=rounds || score1==score2;i++){
+        printf("%s has scored %d,%s has scored %d",team1,score1,team2,score2);
+        if(i%2==1){
+            printf("%s turn\n",team1);
+        }else if(i%2==0){
+            printf("%s turn\n",team2);
+        }
+        printf("round %d",i);
+        
+        int kick_direction;
+        printf("\nwhere will the player shoot? 1:left/2:right\n");
+        scanf("%d",&kick_direction);
+        int dive_direction=dive();
+        int score=goal(kick_direction,dive_direction);
+        print_ball(kick_direction);
+        print_goalkeeper(dive_direction);
+        if (score){
+            if(i%2==1){
+                score1++;
+            }else if(i%2==0){
+                score2++;
+            }
+
+
+        }else{
+            printf("no goal");
+        }
+
+    printf("game finished!! %s scored %d goal %s scored %d goal ",team1,score1,team2,score2);
+
+
+    if(score1>score2){
+        printf("%s won\n!",team1);
+    }else if(score1<score2){
+        printf("%s won\n!",team2);
+    }
+
+            
+
+      
+        
+    }
+
+
+
+return 0;
+
+}
+

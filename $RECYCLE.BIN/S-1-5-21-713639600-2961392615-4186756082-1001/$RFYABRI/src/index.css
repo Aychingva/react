@@ -1,0 +1,12 @@
+*{
+  padding:0;
+  box-sizing: border-box;
+}
+
+.users{
+  width: 90%;
+  max-width: 1140px;
+  display: grid;
+  gap:30px;
+  grid-template-columns: repeat(4,1fr);
+}
