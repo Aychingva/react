@@ -1,0 +1,55 @@
+section{
+  width: 80%;
+  max-width: 1140px;
+  margin-inline:auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+  .products{
+    width: 70%;
+    
+    
+    box-sizing: border-box;
+  
+
+  }
+  .basket-product{
+    width: 30%;
+    background-color: red;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    
+   .b-product{
+    width: 80%;
+    margin-left:20px;
+      box-shadow: 0  0 30px -2px black;
+      background-color: #fff;
+    } 
+    
+
+  }
+  
+  
+
+}
+
+.product-list{
+  width: 100%;
+  display: flex;
+  gap:20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 25%;
+  background-color: red;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
+  
+  text-align: center;
+ 
+ 
+
+}
