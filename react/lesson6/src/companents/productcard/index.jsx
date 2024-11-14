@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
-function Productcard({product,cardlist,setcardlist}) {
+function Productcard({product,cardlist,setcardlist}) { 
 
     const [liked, setLiked] = useState(false);
     const [disliked, setDisliked] = useState(false);
